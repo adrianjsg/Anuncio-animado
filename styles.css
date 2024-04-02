@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.contenedor-anuncio {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f8f8;
+}
+
+.logo {
+    font-size: 36px;
+    color: #ff0000;
+    animation: colorChange 3s infinite alternate, rotate 5s infinite linear, zoom 1s forwards;
+}
+
+.slogan {
+    font-size: 24px;
+    opacity: 0;
+    animation: fadeIn 1s forwards, moveUpDown 2s infinite alternate;
+}
+
+.imagen {
+    width: 300px;
+    height: 300px;
+    background-image: url('burger.jpg'); 
+    background-size: cover;
+    animation: imageAppear 3s forwards;
+}
+
+.texto-oferta {
+    font-size: 18px;
+    animation: blink 1s infinite alternate, colorChange 3s infinite linear;
+}
+
+.boton-llamada {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.boton-llamada:hover {
+    transform: scale(1.1);
+}
+
+@keyframes colorChange {
+    from {
+        color: #ff0000;
+    }
+    to {
+        color: #ffff00;
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes moveUpDown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes imageAppear {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
